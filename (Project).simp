@@ -51,7 +51,7 @@
     <fields>
       <counter>
         <type>SoftwareIdeasModeler.Core.DiagramItems.Fields.OperationField</type>
-        <value>63</value>
+        <value>65</value>
       </counter>
     </fields>
   </counters>
@@ -585,26 +585,14 @@
             </attributes>
             <operations>
               <operation id="o2566d019d61142c3b115201847f299a684" cid="OP014" name="addprocedure" creation-date="03/01/2024 10:34:43" type="" type-id="" visibility="undefined" />
-              <operation id="o3a23c799a6044ac88d2abf150299d714175" cid="OP018" name="Enfermero" creation-date="03/01/2024 10:37:21" type="" type-id="" visibility="undefined">
-                <parameters>
-                  <parameter id="p99cfb8258e1c41229a6f890e624bd53b" name="procedimientos" type="String" type-id="Uml.String" creation-date="03/01/2024 10:37:21" multiplicity="*">
-                    <tagged-values>
-                      <tagged-value id="tvf7934baf92a14ef6a7802a0f1559154b" name="set_procedimientos" type="reference" multiple="false" hidden="false" ref="f1ec2c08b860481e94abba9506a1bcd9" />
-                    </tagged-values>
-                  </parameter>
-                </parameters>
-                <stereotypes>
-                  <stereotype>create</stereotype>
-                </stereotypes>
-              </operation>
-              <operation id="od54728ea813b49ffb07aeae83139397654" cid="OP029" name="GetProcedimientos" creation-date="03/01/2024 10:39:51" type="String" type-id="Uml.String" visibility="public">
+              <operation id="ob9894b2099c147469d0a9417e63c8d31136" cid="OP063" name="GetProcedimientos" creation-date="03/01/2024 10:44:22" type="String" type-id="Uml.String" visibility="public">
                 <stereotypes>
                   <stereotype>getter</stereotype>
                 </stereotypes>
               </operation>
-              <operation id="o15330081589c409cb880a258dd31be6054" cid="OP030" name="SetProcedimientos" creation-date="03/01/2024 10:39:51" type="" type-id="" visibility="public">
+              <operation id="oc125dacdd4e54879ab0d148da0c9e13b136" cid="OP064" name="SetProcedimientos" creation-date="03/01/2024 10:44:22" type="" type-id="" visibility="public">
                 <parameters>
-                  <parameter id="p0d46bf1ed5ce4e04a5a8b94d53d4eabb" name="procedimientos" type="String" type-id="Uml.String" creation-date="03/01/2024 10:39:51" />
+                  <parameter id="pc82d260414f748448a03069635a6fdde" name="procedimientos" type="String" type-id="Uml.String" creation-date="03/01/2024 10:44:22" />
                 </parameters>
                 <stereotypes>
                   <stereotype>setter</stereotype>
@@ -643,14 +631,14 @@
             <layout line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="504" y1="357" x2="843" y2="262" start-border-pos="0.12422360248447205" end-border-pos="0.8755859375" start-local-pos="80" end-local-pos="79.625" name-position="0,20">
               <points>
                 <point x="504" y="357" />
-                <point x="507" y="274.375" />
+                <point x="503" y="258.375" />
                 <point x="843" y="262" />
               </points>
             </layout>
             <relation from="53c47a18ed494b25babeb5aa244bef7e" from-iid="122b9ec6310c48148b03d66c83167686" to="3ba70f99b36647f49cc893067a59bf2b" to-iid="2631c900f72543d5ab4ea1473a2f43a5" />
           </item>
           <item id="74719c637f4d45c3a5ec8b637e39ba1b" iid="8628e1ef27c74267b5ac378eb3bb2726" container="22c6381f001d4696833f9250d20b83b6" container-iid="5d1893649b6e4b6d82df06a9e4b3852a" show-fields="true" creation-date="03/01/2024 10:32:41" order-index="7" type="entity">
-            <layout ax="950" ay="408.375" awidth="140" aheight="165.25" x="950" y="408.375" width="140" height="160" />
+            <layout ax="853.5" ay="419.875" awidth="333" aheight="165.25" x="853.5" y="419.875" width="140" height="160" />
             <classifier />
             <class />
           </item>
@@ -665,9 +653,9 @@
             <relation from="2016315d56184371adf96cdf3fbc78d6" from-iid="a0b74e97c1644b72836d4f02e8ce13d6" to="3ba70f99b36647f49cc893067a59bf2b" to-iid="2631c900f72543d5ab4ea1473a2f43a5" />
           </item>
           <item id="7fd1781c61de4638a528d6d158ffe847" iid="e9c7f53c63dd434e89929d0c70788a31" container="22c6381f001d4696833f9250d20b83b6" container-iid="5d1893649b6e4b6d82df06a9e4b3852a" creation-date="03/01/2024 10:32:54" order-index="8" type="relation">
-            <layout line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="1020" y1="408" x2="1020" y2="357" start-border-pos="0.125" end-border-pos="0.625" start-local-pos="70" end-local-pos="144" name-position="0,20">
+            <layout line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="1020" y1="420" x2="1020" y2="357" start-border-pos="0.125" end-border-pos="0.625" start-local-pos="70" end-local-pos="144" name-position="0,20">
               <points>
-                <point x="1020" y="408" />
+                <point x="1020" y="420" />
                 <point x="1020" y="357" />
               </points>
             </layout>
