@@ -1,4 +1,4 @@
-package org.ptech.citas.java.entities;
+package org.ptech.citas.java.entities.enums;
 
 public enum TipoSangre {
     A,

@@ -1,66 +1,48 @@
 package org.ptech.citas.java;
-import java.time.LocalDateTime;
-import java.time.LocalDate;
 
-import org.ptech.citas.java.entities.Cita;
-import org.ptech.citas.java.entities.Consulta;
-import org.ptech.citas.java.entities.Especialidad;
-import org.ptech.citas.java.entities.EstadoCita;
+
+import org.ptech.citas.java.entities.Enfermero;
 import org.ptech.citas.java.entities.Medico;
-import org.ptech.citas.java.entities.Paciente;
-import org.ptech.citas.java.entities.TipoDocumento;
-import org.ptech.citas.java.entities.TipoSangre;
+//import org.ptech.citas.java.entities.Cita;
+//import org.ptech.citas.java.entities.Consulta;
+//import org.ptech.citas.java.entities.Medico;
+//import org.ptech.citas.java.entities.Paciente;
+import org.ptech.citas.java.entities.enums.Especialidad;
+//import org.ptech.citas.java.entities.enums.EstadoCita;
+import org.ptech.citas.java.entities.enums.TipoDocumento;
+//import org.ptech.citas.java.entities.enums.TipoSangre;
+
 
 
 public class Main {
     public static void main(String[] args) {
-        //crear objeto medico o instanciar
-        //Una manera de dar valor a atributos privados en una clase es atravez del constructor parametrizado
-       
-       Medico m = new Medico(1,
-                "Nicolas",
-                "Daza",
-                TipoDocumento.CC,
-                1021393488L,
-                1234L,
-                Especialidad.CARDIOLOGO);
+        //crear medico
+        Medico m1 = new Medico(1,
+                        "Nicolas",
+                        "Daza",
+                        TipoDocumento.CC,
+                        545645L,
+                        5454L,
+                        Especialidad.CARDIOLOGO);
+    System.out.println("id del medico :" + m1.getId() +
+                        "nombre :" + m1.getNombres()+ 
+                        "apellido: " + m1.getApellidos());
 
-        //Iinstanciar otro medico
-        Medico m2 = new Medico();
-        //Se debe utilizar primero el setter del atributo asignado
-        m2.setNombres("Carla");
-        m2.setApellidos("Fernandez");
-        m2.setNumeroDocumento(6545655L);
-        m2.setTipoDocumento(TipoDocumento.CC);
-        
-        System.out.println(m2.getNombres()+ " " +
-                           m2.getApellidos()+" "+
-                           m2.getNumeroDocumento());
+        Enfermero e1 = new Enfermero(1, 
+                            "Samuel", 
+                            "Fernandez", 
+                            TipoDocumento.CC, 
+                            8789797L);
+        System.out.println("id enfermero:" + e1.getId() + "nombre:" + e1.getNombres());                      
+                            
+        //añadir dos procedimientos al enfermero
+        e1.addProcedure("aplicar inyecciones");
+        e1.addProcedure("lavado de oidos");
 
-     //paciente
-     Paciente p= new Paciente(1, 
-                            "Samuel",
-                            "Perez",
-                            TipoDocumento.CC,
-                            6484646L,
-                            "samuper@gmail.com",
-                            3112588521L,
-                            LocalDate.now(),
-                            164.3,
-                            95.6,
-                            TipoSangre.O,
-                             '+');
-        //cconsulta
-    Consulta c= new Consulta(1,
-                            "Cra69#69 a32",
-                             5156461); 
-        //cita                     
-    Cita cita=new Cita();
-    cita.setFechaCita(LocalDateTime.of(2024, 02, 28, 13, 33, 1)); 
-    cita.setEstadoCita(EstadoCita.AGENDADA); 
-    
-    System.out.println(cita.getFechaCita()+ " " +
-                        cita.getEstadoCita());
-    }
-
+        //recorrer procedimientos de e1
+        for(String p : e1.getProcedimientos()){
+            System.out.println("procedimiento" + p);       
+        }
+                                            
+}
 }

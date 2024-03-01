@@ -1,12 +1,11 @@
 package org.ptech.citas.java.entities;
 import java.time.LocalDate;
 
-public class Paciente {
-    private int id;
-    private String nombres;
-    private String apellidos;
-    private TipoDocumento tipoDocumento;
-    private Long numeroDocumento;
+import org.ptech.citas.java.entities.enums.TipoDocumento;
+import org.ptech.citas.java.entities.enums.TipoSangre;
+
+public class Paciente extends Usuario{
+   
     private String email;
     private Long celular;
     private LocalDate fechaNacimiento;
@@ -15,19 +14,19 @@ public class Paciente {
     private TipoSangre tipoSangre;
     private char factorRH;
 
-    //constructores
-    public Paciente() {
-    }
-
-    
-    public Paciente(int id, String nombres, String apellidos, TipoDocumento tipoDocumento, Long numeroDocumento,
-            String email, Long celular, LocalDate fechaNacimiento, Double altura, Double peso, TipoSangre tipoSangre,
-            char factorRH) {
-        this.id = id;
-        this.nombres = nombres;
-        this.apellidos = apellidos;
-        this.tipoDocumento = tipoDocumento;
-        this.numeroDocumento = numeroDocumento;
+    public Paciente(int id, 
+                    String nombres, 
+                    String apellidos, 
+                    TipoDocumento tipoDocumento, 
+                    Long numeroDocumento,
+                    String email, 
+                    Long celular, 
+                    LocalDate fechaNacimiento, 
+                    Double altura, 
+                    Double peso, 
+                    TipoSangre tipoSangre,
+                    char factorRH) {
+        super(id, nombres, apellidos, tipoDocumento, numeroDocumento);
         this.email = email;
         this.celular = celular;
         this.fechaNacimiento = fechaNacimiento;
@@ -37,8 +36,63 @@ public class Paciente {
         this.factorRH = factorRH;
     }
 
-    //setter y getter
-  
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Long getCelular() {
+        return celular;
+    }
+
+    public void setCelular(Long celular) {
+        this.celular = celular;
+    }
+
+    public LocalDate getFechaNacimiento() {
+        return fechaNacimiento;
+    }
+
+    public void setFechaNacimiento(LocalDate fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
+    }
+
+    public Double getAltura() {
+        return altura;
+    }
+
+    public void setAltura(Double altura) {
+        this.altura = altura;
+    }
+
+    public Double getPeso() {
+        return peso;
+    }
+
+    public void setPeso(Double peso) {
+        this.peso = peso;
+    }
+
+    public TipoSangre getTipoSangre() {
+        return tipoSangre;
+    }
+
+    public void setTipoSangre(TipoSangre tipoSangre) {
+        this.tipoSangre = tipoSangre;
+    }
+
+    public char getFactorRH() {
+        return factorRH;
+    }
+
+    public void setFactorRH(char factorRH) {
+        this.factorRH = factorRH;
+    }
+
+    
 
     
 
