@@ -7,6 +7,19 @@ import org.ptech.citas.java.entities.enums.TipoDocumento;
 public class Medico extends Usuario{
     private long registroMedico;
     private Especialidad especialidad;
+    
+
+    @Override
+    public String toString() {
+        return "Medico [registroMedico=" + 
+                        registroMedico + 
+                        ", especialidad=" + 
+                        especialidad +  
+                        ", nombre:" + 
+                        super.nombres + 
+                        ", apellido:" + 
+                        super.apellidos +"]" ;
+    }
 
     public Medico(int id, 
                 String nombres,

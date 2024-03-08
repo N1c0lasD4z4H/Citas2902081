@@ -3,7 +3,7 @@ package org.ptech.citas.java.entities;
 import org.ptech.citas.java.entities.enums.TipoDocumento;
 //clase padre//
 //clase abstracta: no puede instanciarse, se utiliza "abstract" en superclases
-public abstract class Usuario {
+public  class Usuario {
     //atributos a heredarse deben ser protected
     protected int id;
     protected String nombres;
@@ -11,6 +11,10 @@ public abstract class Usuario {
     protected TipoDocumento tipoDocumento;
     protected Long numeroDocumento;
 
+    //sobreescribir el metodo to string
+    public String toString(){
+        return "nombre:" + this.nombres;
+    }
     
     public Usuario(int id, String nombres, String apellidos, TipoDocumento tipoDocumento, Long numeroDocumento) {
         this.id = id;
